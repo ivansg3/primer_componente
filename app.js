@@ -1,7 +1,10 @@
-import angular from 'angular';
-
-import { HeaderComponent } from './components/header/header.component'  
-
-const app = angular
-  .module("appIndex", [])
-  .component('acHeader', HeaderComponent);
+ angular
+  .module("appProbandoComponent", [])
+  .component("probandoComponent", {
+    template: [
+      '<div class="miclase">',
+      '<span>Esto es algo de HTML en el componente</span> ',
+      '<b>Angular Rules!</b>',
+      '</div>'
+    ].join('')
+  });

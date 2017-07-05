@@ -1,15 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Probando los componentes</title>
-  <script src="node_modules/angular/angular.min.js"></script>
-  <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.min.css"></link>
+  <title>Probando componentes</title>
 </head>
-<body ng-app="appIndex">
-  <ac-header></ac-header>
-  <span>HOLA MUNDO2</span>
-  <script type="text/javascript" src="app.js"></script>
+<body ng-app="appProbandoComponent">
+  <probando-component></probando-component>
+
+  <script src="/node_modules/angular/angular.js"></script>
+  <script>
+  angular
+  .module("appProbandoComponent", [])
+  .component("probandoComponent", {
+    template: [
+      '<div class="miclase">',
+      '<span>Esto es algo de HTML en el componente</span> ',
+      '<b>Angular Rules!</b>',
+      '</div>'
+    ].join('')
+  });
+  </script>
 </body>
 </html>
 
